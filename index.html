@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  
+  <title>Malabar LED | LED Videowall, Mobile Van &amp; Signage Solutions Kerala</title>
+  <meta name="description" content="Kerala's premier manufacturer and integrator of Mobile Van Video Walls, Outdoor Hoardings, Indoor Video Walls, LED Scrolling Boards, Digital Standees, Rental Cabinets & 3D Signage." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .led-glow { text-shadow: 0 0 25px rgba(59, 130, 246, 0.7); }
+    
+    /* Carousel Transitions */
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1), visibility 800ms cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: opacity, transform;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
+    }
+    .slide-indicator.active {
+      width: 2.2rem;
+      background-color: #3b82f6;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+  <!-- ================= TOP CONTACT BAR ================= -->
+  <div class="bg-blue-950/80 border-b border-blue-900/50 text-xs py-2 px-4 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-6 text-slate-300">
+        <span><i class="fa-solid fa-location-dot text-blue-400 mr-1.5"></i> Kozhikode &amp; Kannur, Kerala</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-clock text-blue-400 mr-1.5"></i> Mon - Sat: 9:00 AM - 7:30 PM</span>
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="tel:+918289853114" class="hover:text-blue-300 text-slate-300 transition">
+          <i class="fa-solid fa-phone mr-1"></i> +91 82898 53114
+        </a>
+        <a href="https://wa.me/918289853114?text=Hi%20Malabar%20LED,%20I%20am%20interested%20in%20an%20LED%20Display%20quotation." target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+          <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Inquiry
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR WITH NEW OFFICIAL LOGO ================= -->
+  <nav class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <img 
+          src="images/logo.png" 
+          alt="Malabar LED Logo" 
+          class="h-9 sm:h-11 w-auto object-contain transition duration-300 group-hover:brightness-110"
+          onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';"
+        />
+        <!-- Safe Fallback Text & Icon in case local logo image is not yet placed in images/ folder -->
+        <div id="logo-fallback" class="hidden items-center space-x-2">
+          <span class="inline-block w-8 h-8 rounded-full bg-gradient-to-tr from-red-500 via-green-500 to-blue-600"></span>
+          <span class="text-xl sm:text-2xl font-black tracking-wider text-white">MALABAR <span class="text-red-500">L</span><span class="text-green-500">E</span><span class="text-blue-500">D</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-7 font-medium text-sm text-slate-300">
+        <a href="#hero-carousel" class="hover:text-blue-400 transition">Featured Solutions</a>
+        <a href="#products" class="hover:text-blue-400 transition">All Products</a>
+        <a href="#software" class="hover:text-blue-400 transition">Software Hub</a>
+        <a href="#videos" class="hover:text-blue-400 transition">Videos &amp; Social</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Branches &amp; Quotes</a>
+      </div>
+
+      <!-- Quick Social Icons & Quote Button -->
+      <div class="flex items-center space-x-4">
+        <a href="https://www.instagram.com/malabarled/" target="_blank" aria-label="Instagram" class="text-slate-300 hover:text-pink-400 transition text-lg">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@malabarled" target="_blank" aria-label="YouTube" class="text-slate-300 hover:text-red-500 transition text-lg">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-lg transition shadow-lg shadow-blue-600/30">
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= FULL-WIDTH RESPONSIVE 7-SLIDE HERO SECTION ================= -->
+  <section class="relative w-full min-h-[560px] h-[calc(100vh-6.5rem)] max-h-[760px] bg-slate-950 overflow-hidden" id="hero-carousel">
+    
+    <!-- Slide 1: Vehicle Van Moving Videowall -->
+    <div class="hero-slide active">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-van-videowall.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-truck-moving"></i> Mobile Advertising
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Vehicle Van <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-200">
+              3-Side Mobile Video Wall
+            </span>
+          </h1>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            Custom engineered Left, Right &amp; Rear screens for election campaigns, brand roadshows, and mobile promotional campaigns with onboard generator sync.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('van-wall')" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-amber-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#contact" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Custom Van Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Outdoor Videowall -->
+    <div class="hero-slide">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-outdoor.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-cloud-sun-rain"></i> Weatherproof IP65
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Ultra-Bright <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-cyan-300">
+              Outdoor LED Videowall
+            </span>
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            Commercial hoardings, highway billboards, and shop fronts built with &gt;6,500 Nits brightness to fight direct sunlight and heavy Kerala rainfall.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('outdoor-wall')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-blue-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#contact" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Request Site Survey
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Indoor Videowall -->
+    <div class="hero-slide">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-indoor.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-tv"></i> Fine-Pitch High Resolution
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Seamless Indoor <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-300 led-glow">
+              Indoor LED Videowall
+            </span>
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            P1.86, P2.0, and P2.5 fine-pitch displays for corporate boardrooms, auditoriums, TV studios, and luxury retail with 3840Hz refresh rates.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('indoor-wall')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-indigo-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#contact" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Get Pitch Recommendation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: LED Scrolling Board -->
+    <div class="hero-slide">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-scrolling.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-arrows-left-right"></i> Commercial Shop Fronts
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Single &amp; Multi-Color <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-green-200">
+              LED Scrolling Boards
+            </span>
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            Dynamic Wi-Fi and mobile app-controlled message boards for retail shops, hospitals, gold/currency rates, and token queue systems.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('scrolling-board')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-emerald-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#software" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Download App / Software
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: LED Standee Display (LED & LCD) -->
+    <div class="hero-slide">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-standee.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-mobile-screen"></i> Vertical Digital Totems
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            LED &amp; LCD <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-300 to-sky-200">
+              Digital Standee Displays
+            </span>
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            Plug &amp; play vertical poster screens with wheels and cloud CMS for shopping malls, jewelry showrooms, wedding halls, and hospital receptions.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('standee-display')" class="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#contact" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Showroom Inquiries
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: LED Rental Cabinet -->
+    <div class="hero-slide">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-rental.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-sliders"></i> Fast Quick-Locking System
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Stage &amp; Event <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-rose-300">
+              LED Rental Cabinets
+            </span>
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            Lightweight die-cast aluminum 500x500mm / 500x1000mm cabinets with curve locks (-10° to +10°), flight cases, and hanging beam hardware.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('rental-cabinet')" class="bg-purple-600 hover:bg-purple-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-purple-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#contact" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Rental Inventory Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: LED Sign Board (3D Letters, Fabric, Slim) -->
+    <div class="hero-slide">
+      <div class="absolute inset-0 bg-cover bg-no-repeat bg-right-bottom" style="background-image: url('images/hero-signboard.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+      <div class="relative z-20 max-w-7xl mx-auto h-full flex items-center px-6 sm:px-12">
+        <div class="max-w-2xl pt-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-lightbulb"></i> Architectural Branding
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Architectural Signage <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-red-300 to-orange-300">
+              3D Acrylic, Fabric &amp; Slim Boards
+            </span>
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm lg:text-base mb-6 leading-relaxed max-w-xl">
+            Precision laser-cut acrylic letters, rimless backlit fabric light boxes, and ultra-slim clip-on menu displays built for premier brands.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openProductModal('sign-board')" class="bg-rose-600 hover:bg-rose-500 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-rose-600/40 transition text-xs sm:text-sm flex items-center gap-2">
+              <span>View Product Details</span> <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#contact" class="bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm">
+              Signage Estimate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls (Left / Right Arrows) -->
+    <button onclick="prevSlide()" aria-label="Previous Slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-slate-900/70 border border-slate-700 text-slate-200 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition flex items-center justify-center">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button onclick="nextSlide()" aria-label="Next Slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-slate-900/70 border border-slate-700 text-slate-200 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition flex items-center justify-center">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicators (7 Dots) -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-2">
+      <button onclick="goToSlide(0)" class="slide-indicator active w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 1"></button>
+      <button onclick="goToSlide(1)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 2"></button>
+      <button onclick="goToSlide(2)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 3"></button>
+      <button onclick="goToSlide(3)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 4"></button>
+      <button onclick="goToSlide(4)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 5"></button>
+      <button onclick="goToSlide(5)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 6"></button>
+      <button onclick="goToSlide(6)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 7"></button>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT CATALOG SECTION ================= -->
+  <section id="products" class="py-20 max-w-7xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+      <div>
+        <div class="text-blue-500 font-bold text-xs uppercase tracking-wider mb-2">Our Solutions &amp; Hardware</div>
+        <h2 class="text-3xl font-extrabold text-white">Full Product Catalog</h2>
+        <p class="text-slate-400 text-sm mt-1">Select any category to read full specifications, pitches, and installation options.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-amber-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-van-videowall.jpg" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80'" alt="Vehicle Van Wall" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-500/20 text-amber-400">Mobile Unit</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">Vehicle Van 3-Side Moving Wall</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">Hydraulic lifting, shock-proof chassis, dual-side &amp; rear outdoor screens for road campaigns.</p>
+          </div>
+          <button onclick="openProductModal('van-wall')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-outdoor.jpg" onerror="this.src='https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80'" alt="Outdoor Videowall" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-blue-500/20 text-blue-400">Commercial Hoardings</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">Outdoor LED Videowall</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">P4, P5, P6, P10 modules with IP65 waterproofing and up to 7,500 Nits brightness.</p>
+          </div>
+          <button onclick="openProductModal('outdoor-wall')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-indigo-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-indoor.jpg" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80'" alt="Indoor Videowall" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-400">Fine Pitch</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">Indoor LED Videowall</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">P1.86, P2.0, P2.5 seamless die-cast displays for boardrooms, auditoriums, and broadcast.</p>
+          </div>
+          <button onclick="openProductModal('indoor-wall')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-indigo-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-emerald-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-scrolling.jpg" onerror="this.src='https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80'" alt="Scrolling Board" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400">Text &amp; Signs</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">LED Scrolling Boards</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">Wi-Fi &amp; USB programmable boards in single-color and full-color RGB for shops and offices.</p>
+          </div>
+          <button onclick="openProductModal('scrolling-board')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-standee.jpg" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80'" alt="Digital Standee" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400">Totems</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">LED &amp; LCD Standee Displays</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">Floor-standing mobile poster screens with integrated Android media players and cloud CMS.</p>
+          </div>
+          <button onclick="openProductModal('standee-display')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-cyan-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-purple-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-rental.jpg" onerror="this.src='https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80'" alt="Rental Cabinet" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-purple-500/20 text-purple-400">Events &amp; Stages</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">LED Rental Cabinets</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">500x500mm / 500x1000mm fast-lock cabinets with road flight cases and convex/concave locks.</p>
+          </div>
+          <button onclick="openProductModal('rental-cabinet')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-purple-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-rose-500/50 transition flex flex-col justify-between">
+        <img src="images/hero-signboard.jpg" onerror="this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=600&q=80'" alt="Sign Board" class="h-48 w-full object-cover" />
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-rose-500/20 text-rose-400">Architectural</span>
+            <h4 class="font-bold text-slate-100 text-lg mt-2">LED Sign Boards &amp; 3D Letters</h4>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">CNC acrylic 3D letters, backlit frameless fabric boxes, and edge-lit slim menu boards.</p>
+          </div>
+          <button onclick="openProductModal('sign-board')" class="mt-4 w-full py-2 bg-slate-800 hover:bg-rose-600 text-slate-200 hover:text-white rounded-lg text-xs font-semibold transition">
+            View Details &amp; Specs &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOFTWARE DOWNLOAD SECTION (GOOGLE DRIVE) ================= -->
+  <section id="software" class="py-16 bg-slate-900/50 border-t border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-3">
+          <i class="fa-solid fa-cloud-arrow-down"></i> Driver &amp; Controller Hub
+        </div>
+        <h2 class="text-3xl font-extrabold text-white mb-2">Software &amp; Utilities Download</h2>
+        <p class="text-slate-400 text-sm">Download official configuration tools for Malabar LED video walls and signage boards. Hosted securely via Google Drive.</p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-300">
+            <thead class="bg-slate-950/80 text-xs uppercase text-slate-400 border-b border-slate-800">
+              <tr>
+                <th class="py-4 px-6">Software / Tool</th>
+                <th class="py-4 px-6">Controller Series</th>
+                <th class="py-4 px-6">Platform</th>
+                <th class="py-4 px-6 text-right">Download Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-4 px-6 font-semibold text-white">
+                  <i class="fa-brands fa-windows text-blue-400 mr-2"></i> HDPlayer v7.x (Video Wall)
+                </td>
+                <td class="py-4 px-6 text-slate-400">Huidu Asynchronous / Video Box</td>
+                <td class="py-4 px-6"><span class="bg-slate-800 px-2.5 py-1 rounded text-xs">Windows 10/11</span></td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://drive.google.com/uc?export=download&id=YOUR_GDRIVE_FILE_ID_1" target="_blank" class="inline-flex items-center px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium transition">
+                    <i class="fa-solid fa-download mr-1.5"></i> Direct Download
+                  </a>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-4 px-6 font-semibold text-white">
+                  <i class="fa-brands fa-windows text-blue-400 mr-2"></i> NovaLCT Config Tool
+                </td>
+                <td class="py-4 px-6 text-slate-400">Novastar MRV / Taurus Series</td>
+                <td class="py-4 px-6"><span class="bg-slate-800 px-2.5 py-1 rounded text-xs">Windows 10/11</span></td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://drive.google.com/uc?export=download&id=YOUR_GDRIVE_FILE_ID_2" target="_blank" class="inline-flex items-center px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium transition">
+                    <i class="fa-solid fa-download mr-1.5"></i> Direct Download
+                  </a>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-4 px-6 font-semibold text-white">
+                  <i class="fa-brands fa-android text-emerald-400 mr-2"></i> LEDART Mobile App
+                </td>
+                <td class="py-4 px-6 text-slate-400">Single &amp; Full Color Wi-Fi Cards</td>
+                <td class="py-4 px-6"><span class="bg-slate-800 px-2.5 py-1 rounded text-xs">Android / iOS</span></td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://play.google.com/store/apps/details?id=com.huidu.ledart" target="_blank" class="inline-flex items-center px-3 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition border border-slate-700">
+                    <i class="fa-brands fa-google-play mr-1.5"></i> Play Store
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOUTUBE & INSTAGRAM VIDEO / SOCIAL HUB ================= -->
+  <section id="videos" class="py-20 max-w-7xl mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold mb-3">
+        <i class="fa-brands fa-youtube"></i> Real On-Site Installations
+      </div>
+      <h2 class="text-3xl font-extrabold text-white mb-2">Watch Malabar LED In Action</h2>
+      <p class="text-slate-400 text-sm">Follow our live project updates on YouTube and Instagram across Kerala.</p>
+    </div>
+
+    <!-- Official Channel Link Bar -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+      <!-- YouTube Channel Card -->
+      <a href="https://www.youtube.com/@malabarled" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-red-500/50 p-4 rounded-xl flex items-center justify-between group transition">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div>
+            <div class="text-white font-bold text-sm">Malabar LED YouTube Channel</div>
+            <div class="text-slate-400 text-xs">@malabarled &bull; Case Studies &amp; Shorts</div>
+          </div>
+        </div>
+        <span class="text-red-400 text-xs font-semibold flex items-center gap-1 group-hover:translate-x-1 transition">
+          Subscribe <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+
+      <!-- Instagram Profile Card -->
+      <a href="https://www.instagram.com/malabarled/" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-pink-500/50 p-4 rounded-xl flex items-center justify-between group transition">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 rounded-full bg-pink-600/20 text-pink-400 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div>
+            <div class="text-white font-bold text-sm">Malabar LED Instagram</div>
+            <div class="text-slate-400 text-xs">@malabarled &bull; Reels &amp; Daily Stories</div>
+          </div>
+        </div>
+        <span class="text-pink-400 text-xs font-semibold flex items-center gap-1 group-hover:translate-x-1 transition">
+          Follow <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+
+    <!-- Video Embeds Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      
+      <!-- Embedded YouTube Video Card -->
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-bold text-red-400 uppercase flex items-center">
+            <i class="fa-brands fa-youtube mr-2 text-base text-red-500"></i> YouTube Showcase: @malabarled
+          </span>
+          <a href="https://www.youtube.com/watch?v=laY3IfVGHr4" target="_blank" class="text-xs text-slate-400 hover:text-white transition">
+            Open in YouTube &rarr;
+          </a>
+        </div>
+        
+        <!-- Video Wrapper -->
+        <div class="w-full flex justify-center bg-slate-950 rounded-xl p-3 border border-slate-800/80">
+          <div class="w-full max-w-[340px] aspect-[9/16] rounded-xl overflow-hidden bg-black shadow-2xl relative">
+            <iframe 
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/laY3IfVGHr4?si=GbfrGkYHLx8pYVuo" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="mt-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-base font-bold text-white">Malabar LED House: Displays &amp; Walls</h4>
+            <p class="text-xs text-slate-400 mt-1">Indoor &amp; Outdoor Videowalls, Scrolling Letters, Gold Rate, Standees.</p>
+          </div>
+          <a href="https://www.youtube.com/watch?v=laY3IfVGHr4" target="_blank" class="px-3 py-1.5 rounded-lg bg-red-600/20 text-red-400 border border-red-600/30 text-xs font-medium hover:bg-red-600 hover:text-white transition">
+            Watch on YT
+          </a>
+        </div>
+      </div>
+
+      <!-- Embedded Instagram Reel Card -->
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-bold text-pink-400 uppercase flex items-center">
+            <i class="fa-brands fa-instagram mr-2 text-base text-pink-500"></i> Featured Instagram Reel
+          </span>
+          <a href="https://www.instagram.com/reel/DZZGgyARTsh/" target="_blank" class="text-xs text-slate-400 hover:text-white transition">
+            Open @malabarled &rarr;
+          </a>
+        </div>
+
+        <!-- Embedded Instagram Reel Frame -->
+        <div class="w-full flex justify-center bg-slate-950 rounded-xl p-3 border border-slate-800/80">
+          <div class="w-full max-w-[340px] aspect-[9/16] rounded-xl overflow-hidden bg-white shadow-2xl relative">
+            <iframe 
+              class="w-full h-full border-0" 
+              src="https://www.instagram.com/reel/DZZGgyARTsh/embed/captioned/" 
+              title="Malabar LED Instagram Reel"
+              allowtransparency="true" 
+              allow="encrypted-media"
+              frameborder="0" 
+              scrolling="no">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="mt-4 flex items-center justify-between">
+          <div>
+            <h4 class="text-base font-bold text-white">Daily Reels &amp; Workshop Testing</h4>
+            <p class="text-xs text-slate-400 mt-1">Direct stream from @malabarled Instagram channel.</p>
+          </div>
+          <a href="https://www.instagram.com/malabarled/" target="_blank" class="px-3 py-1.5 rounded-lg bg-pink-600/20 text-pink-400 border border-pink-600/30 text-xs font-medium hover:bg-pink-600 hover:text-white transition">
+            Follow
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & BRANCHES ================= -->
+  <section id="contact" class="py-16 bg-slate-900/50 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-white mb-2">Request a Site Visit &amp; Fast Quote</h2>
+        <p class="text-slate-400 text-sm">Need a custom dimension or pixel pitch suggestion? Speak directly to our engineers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Direct Contact Form -->
+        <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-xl p-6 sm:p-8">
+          <form onsubmit="handleInquiry(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name</label>
+                <input type="text" id="custName" required placeholder="e.g. Rahul" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number / WhatsApp</label>
+                <input type="tel" id="custPhone" required placeholder="+91 82898 53114" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Product Interested In</label>
+                <select id="projectCategory" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500">
+                  <option value="Vehicle Van 3-Side Video Wall">Vehicle Van 3-Side Video Wall</option>
+                  <option value="Outdoor LED Videowall">Outdoor LED Videowall (P4 - P10)</option>
+                  <option value="Indoor LED Videowall">Indoor LED Videowall (P1.8 - P2.5)</option>
+                  <option value="LED Scrolling Board">LED Scrolling Board (Wi-Fi/USB)</option>
+                  <option value="LED Standee Display (LED/LCD)">LED / LCD Standee Display</option>
+                  <option value="LED Rental Cabinet">LED Rental Cabinet</option>
+                  <option value="LED Sign Board (3D Acrylic / Fabric)">LED Sign Board (3D / Fabric / Slim)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Approx Size (Feet or Cabinets)</label>
+                <input type="text" id="custSize" placeholder="e.g. 16ft x 10ft" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Site Location &amp; Additional Details</label>
+              <textarea id="custMsg" rows="3" placeholder="Installation location (e.g. Kozhikode Bypass), installation deadline..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Send Inquiry via WhatsApp
+            </button>
+          </form>
+        </div>
+
+        <!-- Branch Cards -->
+        <div class="space-y-4">
+          <!-- Kozhikode Branch -->
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            <div class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">Head Office</div>
+            <h4 class="text-lg font-bold text-white mb-2">Kozhikode (Calicut)</h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-3">
+              Afba Complex, Stadium Junction, Puthiyara Road, Kozhikode, Kerala 673004
+            </p>
+            <a href="tel:+918289853114" class="text-xs text-blue-400 hover:underline block mb-1">
+              <i class="fa-solid fa-phone mr-1"></i> +91 82898 53114
+            </a>
+          </div>
+
+          <!-- Kannur Branch -->
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            <div class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">Regional Branch</div>
+            <h4 class="text-lg font-bold text-white mb-2">Kannur</h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-3">
+              Sadhoo Building, Near Railway Station, Fort Road, Kannur, Kerala 670001
+            </p>
+            <a href="tel:+918289853114" class="text-xs text-blue-400 hover:underline block">
+              <i class="fa-solid fa-phone mr-1"></i> +91 82898 53114
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER WITH NEW LOGO ================= -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+      
+      <!-- Footer Logo Display -->
+      <a href="#" class="mb-5 inline-block">
+        <img 
+          src="images/logo.png" 
+          alt="Malabar LED Footer Logo" 
+          class="h-8 w-auto object-contain mx-auto brightness-90 hover:brightness-100 transition"
+          onerror="this.style.display='none';"
+        />
+      </a>
+
+      <!-- Social Links -->
+      <div class="flex justify-center space-x-6 mb-5 text-base">
+        <a href="https://www.instagram.com/malabarled/" target="_blank" class="hover:text-pink-400 transition" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@malabarled" target="_blank" class="hover:text-red-500 transition" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://wa.me/918289853114" target="_blank" class="hover:text-emerald-400 transition" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p>&copy; 2026 Malabar LED Solutions. All rights reserved. Hostable on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- ================= PRODUCT DETAIL MODAL DIALOG ================= -->
+  <div id="productModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
+      <button onclick="closeProductModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modalContent">
+        <!-- Injected via JavaScript dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // --- 7-Slide Responsive Carousel Engine ---
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.slide-indicator');
+    const totalSlides = slides.length;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      indicators.forEach((indicator, i) => {
+        if (i === index) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % totalSlides;
+      showSlide(nextIndex);
+      resetAutoPlay();
+    }
+
+    function prevSlide() {
+      const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(prevIndex);
+      resetAutoPlay();
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      resetAutoPlay();
+    }
+
+    function startAutoPlay() {
+      slideInterval = setInterval(() => {
+        const nextIndex = (currentSlide + 1) % totalSlides;
+        showSlide(nextIndex);
+      }, 5500); // 5.5 seconds per slide
+    }
+
+    function resetAutoPlay() {
+      clearInterval(slideInterval);
+      startAutoPlay();
+    }
+
+    startAutoPlay();
+
+    const carouselElement = document.getElementById('hero-carousel');
+    carouselElement.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    carouselElement.addEventListener('mouseleave', () => startAutoPlay());
+
+    // --- Product Detail Specifications Database ---
+    const productData = {
+      'van-wall': {
+        title: "Vehicle Van Moving Videowall (3-Side Panel)",
+        tag: "Mobile Advertising Unit",
+        image: "images/hero-van-videowall.jpg",
+        description: "Engineered specifically for election campaigns, brand launches, and road tours across Kerala. Mounted with hydraulic lifting mechanism on Tata Ace, Bolero Maxi Truck, or Isuzu platforms.",
+        specs: [
+          { name: "Panel Configuration", val: "3 Sides (Left, Right & Rear Outdoor Screens)" },
+          { name: "Pixel Pitch", val: "P4 or P5 Outdoor High Brightness" },
+          { name: "Brightness", val: "> 6,500 Nits (Daylight clear under sunlight)" },
+          { name: "Power Source", val: "Silent On-Board Diesel Generator Integration" },
+          { name: "Shock Resistance", val: "Reinforced chassis with anti-vibration rubber mounts" },
+          { name: "Controller", val: "Novastar Synchronous Video Box with Audio Amp" }
+        ]
+      },
+      'outdoor-wall': {
+        title: "Outdoor LED Videowalls & Commercial Hoardings",
+        tag: "Waterproof IP65 Grade",
+        image: "images/hero-outdoor.jpg",
+        description: "Built to handle severe monsoon downpours and bright tropical sunlight. Features heavy-duty iron/aluminum cabinets with rear access doors or front magnetic servicing.",
+        specs: [
+          { name: "Pixel Pitches", val: "P4, P5, P6, P10 Outdoor SMD" },
+          { name: "Ingress Protection", val: "Front IP65 / Back IP54 Waterproof" },
+          { name: "Brightness", val: "5,500 – 7,500 Nits (Auto-dimming sensor included)" },
+          { name: "Refresh Rate", val: "≥ 1920Hz – 3840Hz" },
+          { name: "Connectivity", val: "LAN, 4G SIM Cloud Remote Scheduling" }
+        ]
+      },
+      'indoor-wall': {
+        title: "Indoor Fine-Pitch LED Videowalls",
+        tag: "Ultra HD Display",
+        image: "images/hero-indoor.jpg",
+        description: "Bezel-free, high-definition video walls for auditoriums, luxury showrooms, TV broadcast studios, and command control centers.",
+        specs: [
+          { name: "Pixel Pitches", val: "P1.86, P2.0, P2.5, P3 Indoor" },
+          { name: "Cabinet Type", val: "Die-cast Aluminum (640x480mm standard)" },
+          { name: "Brightness", val: "600 – 1,000 Nits (Eye-comfort calibrated)" },
+          { name: "Refresh Rate", val: "3840Hz (Flicker-free on mobile & TV camera)" },
+          { name: "Viewing Angle", val: "160° Horizontal / 160° Vertical" }
+        ]
+      },
+      'scrolling-board': {
+        title: "LED Scrolling Boards (Single & RGB)",
+        tag: "Commercial Message Displays",
+        image: "images/hero-scrolling.jpg",
+        description: "Reliable shop-front scrolling message boards. Update offers, greetings, and token queue status using an Android mobile phone app or PC over Wi-Fi.",
+        specs: [
+          { name: "Module Type", val: "P10 Single Color (Red, Green, Blue, White) & P10 RGB" },
+          { name: "Programming", val: "LedArt App (Wi-Fi) / USB Flash Drive" },
+          { name: "Enclosure", val: "Heavy-duty aluminum extrusion frame with waterproof seal" },
+          { name: "Power", val: "5V Meanwell or high-grade equivalent power supplies" }
+        ]
+      },
+      'standee-display': {
+        title: "LED & LCD Digital Standee Displays",
+        tag: "Vertical Digital Totems",
+        image: "images/hero-standee.jpg",
+        description: "Sleek, plug-and-play digital totem screens. Available in ultra-bright LED poster format or high-resolution 4K LCD commercial displays with toughened front glass.",
+        specs: [
+          { name: "Available Types", val: "LED Poster (P2, P2.5) & LCD Commercial (43\", 55\", 65\")" },
+          { name: "Resolution", val: "Full HD to 4K Ultra HD" },
+          { name: "Operating System", val: "Built-in Android OS with Wi-Fi & USB playback" },
+          { name: "Mobility", val: "Heavy-duty base with lockable castor wheels" }
+        ]
+      },
+      'rental-cabinet': {
+        title: "Stage & Event LED Rental Cabinets",
+        tag: "Fast-Lock Rental System",
+        image: "images/hero-rental.jpg",
+        description: "Built for stage decorators, rental event organizers, and exhibition stalls who require fast assembly, disassembly, and rugged road transport.",
+        specs: [
+          { name: "Cabinet Sizes", val: "500x500mm / 500x1000mm die-cast magnesium" },
+          { name: "Locking System", val: "One-man quick lock with curve brackets (-10° to +10°)" },
+          { name: "Pixel Pitch", val: "P2.6, P2.97, P3.91 Indoor/Outdoor" },
+          { name: "Accessories Included", val: "Hanging bars, flight cases, powerCON linking cables" }
+        ]
+      },
+      'sign-board': {
+        title: "Architectural Signage (3D Acrylic, Fabric & Slim Boards)",
+        tag: "Custom Shop Branding",
+        image: "images/hero-signboard.jpg",
+        description: "Custom architectural signage fabricated in our Calicut workshop. Premium 3D acrylic letters with Samsung LED injection modules, seamless fabric lightboxes, and slim menu boards.",
+        specs: [
+          { name: "Letter Types", val: "Acrylic 3D, SS Steel Edge, Brass, Neon Flex" },
+          { name: "Fabric Boxes", val: "UV printed tension fabric with edge-lit matrix" },
+          { name: "Slim Boards", val: "Magnetic clip-on acrylic slim lightboxes" },
+          { name: "Warranty", val: "Up to 3 years LED module warranty" }
+        ]
+      }
+    };
+
+    function openProductModal(key) {
+      const prod = productData[key];
+      if (!prod) return;
+
+      const modal = document.getElementById('productModal');
+      const content = document.getElementById('modalContent');
+
+      let specRows = prod.specs.map(s => `
+        <div class="flex justify-between py-2 border-b border-slate-800 text-xs">
+          <span class="text-slate-400 font-medium">${s.name}</span>
+          <span class="text-slate-200 font-semibold text-right">${s.val}</span>
+        </div>
+      `).join('');
+
+      content.innerHTML = `
+        <img src="${prod.image}" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80'" alt="${prod.title}" class="w-full h-56 object-cover rounded-xl mb-4 border border-slate-800" />
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/20 px-2.5 py-1 rounded">${prod.tag}</span>
+        <h3 class="text-2xl font-bold text-white mt-3 mb-2">${prod.title}</h3>
+        <p class="text-xs text-slate-300 leading-relaxed mb-6">${prod.description}</p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/80 mb-6">
+          <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Technical Specifications</h5>
+          ${specRows}
+        </div>
+        <div class="flex gap-3">
+          <button onclick="inquireProduct('${prod.title}')" class="flex-1 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition text-xs flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-base"></i> Inquire Price on WhatsApp
+          </button>
+          <button onclick="closeProductModal()" class="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-lg transition text-xs">
+            Close
+          </button>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function inquireProduct(productName) {
+      closeProductModal();
+      const message = `Hello Malabar LED,\n\nI want more technical details and price quotation for *${productName}*. Please contact me.`;
+      const businessPhone = "918289853114";
+      window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // --- General Inquiry WhatsApp Form ---
+    function handleInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const cat = document.getElementById('projectCategory').value;
+      const size = document.getElementById('custSize').value;
+      const msg = document.getElementById('custMsg').value;
+
+      const fullMessage = `Hello Malabar LED,\n\nI want a quotation for *${cat}*.\n- Name: ${name}\n- Phone: ${phone}\n- Approx Size: ${size}\n- Details/Location: ${msg}`;
+      
+      const businessPhone = "918289853114";
+      const whatsappUrl = `https://wa.me/${businessPhone}?text=${encodeURIComponent(fullMessage)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
