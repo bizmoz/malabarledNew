@@ -35,6 +35,22 @@
       width: 2.2rem;
       background-color: #3b82f6;
     }
+
+    /* Force Pure Video for Instagram Embeds by aggressively cropping the generated blockquote */
+    .pure-instagram-container {
+      overflow: hidden;
+      border-radius: 1rem;
+      position: relative;
+    }
+    /* We pull the blockquote up and down so only the video player shows */
+    .pure-instagram-container .instagram-media {
+      margin-top: -65px !important;
+      margin-bottom: -115px !important;
+      min-width: 100% !important;
+      border: none !important;
+      box-shadow: none !important;
+      background-color: #000 !important;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
@@ -57,7 +73,7 @@
     </div>
   </div>
 
-  <!-- ================= NAVBAR WITH NEW OFFICIAL LOGO ================= -->
+  <!-- ================= NAVBAR ================= -->
   <nav class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
@@ -80,7 +96,7 @@
         <a href="#hero-carousel" class="hover:text-blue-400 transition">Featured Solutions</a>
         <a href="#products" class="hover:text-blue-400 transition">All Products</a>
         <a href="#software" class="hover:text-blue-400 transition">Software Hub</a>
-        <a href="#videos" class="hover:text-blue-400 transition">Videos &amp; Social</a>
+        <a href="#videos" class="hover:text-blue-400 transition">Installations</a>
         <a href="#contact" class="hover:text-blue-400 transition">Branches &amp; Quotes</a>
       </div>
 
@@ -319,7 +335,7 @@
       </div>
     </div>
 
-    <!-- Carousel Controls (Left / Right Arrows) -->
+    <!-- Carousel Controls -->
     <button onclick="prevSlide()" aria-label="Previous Slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-slate-900/70 border border-slate-700 text-slate-200 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition flex items-center justify-center">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
@@ -327,7 +343,7 @@
       <i class="fa-solid fa-chevron-right"></i>
     </button>
 
-    <!-- Indicators (7 Dots) -->
+    <!-- Indicators -->
     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-2">
       <button onclick="goToSlide(0)" class="slide-indicator active w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 1"></button>
       <button onclick="goToSlide(1)" class="slide-indicator w-3 h-2 rounded-full bg-slate-600 transition-all duration-300" aria-label="Slide 2"></button>
@@ -350,6 +366,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Catalog Cards Omitted for Brevity in Code String - They remain exactly identical to your previous iteration -->
       <!-- Card 1 -->
       <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-amber-500/50 transition flex flex-col justify-between">
         <img src="images/hero-van2.png" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80'" alt="Vehicle Van Wall" class="h-48 w-full object-cover" />
@@ -571,24 +588,25 @@
     </div>
   </section>
 
-  <!-- ================= YOUTUBE & INSTAGRAM VIDEO SHOWCASE (PURE VIDEO) ================= -->
+  <!-- ================= VIDEO SHOWCASE (PURE VIDEO ONLY) ================= -->
   <section id="videos" class="py-20 max-w-7xl mx-auto px-4">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold mb-3">
         <i class="fa-brands fa-youtube"></i> Real On-Site Installations
       </div>
       <h2 class="text-3xl font-extrabold text-white mb-2">Watch Malabar LED In Action</h2>
-      <p class="text-slate-400 text-sm">Direct video feeds from our latest project installations.</p>
+      <p class="text-slate-400 text-sm">Follow our live project updates on YouTube and Instagram across Kerala.</p>
     </div>
 
-    <!-- Pure Video Embeds Grid (No Captions, No Extra Cards) -->
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-8 lg:gap-16">
+    <!-- PURE VIDEO LAYOUT (No text cards, no extra info) -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
       
-      <!-- Minimalist YouTube Video Embed -->
-      <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-2xl relative border border-slate-800">
+      <!-- Minimalist YouTube Video Embed (No Controls, No Logo) -->
+      <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl relative border border-slate-800 bg-slate-900">
+        <!-- Exact link with strict styling parameters -->
         <iframe 
-          class="w-full h-full border-0 absolute top-0 left-0"
-          src="https://www.youtube.com/embed/laY3IfVGHr4?si=GbfrGkYHLx8pYVuo&controls=1&rel=0&modestbranding=1" 
+          class="absolute top-0 left-0 w-full h-full border-0"
+          src="https://www.youtube.com/embed/laY3IfVGHr4?si=GbfrGkYHLx8pYVuo&controls=0&modestbranding=1&rel=0&showinfo=0" 
           title="YouTube video player" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerpolicy="strict-origin-when-cross-origin" 
@@ -596,16 +614,13 @@
         </iframe>
       </div>
 
-      <!-- Minimalist Instagram Reel Embed -->
-      <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-2xl relative border border-slate-800">
-        <iframe 
-          class="w-full h-full border-0 absolute top-0 left-0" 
-          src="https://www.instagram.com/reel/DZZGgyARTsh/embed/" 
-          title="Malabar LED Instagram Reel"
-          allowtransparency="true" 
-          allow="encrypted-media"
-          scrolling="no">
-        </iframe>
+      <!-- Minimalist Instagram Reel (Aggressively Cropped) -->
+      <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900 pure-instagram-container flex items-center justify-center">
+        <!-- Negative margins hide the Instagram header and footer -->
+        <div class="w-full">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZZGgyARTsh/" data-instgrm-version="14">
+          </blockquote>
+        </div>
       </div>
 
     </div>
@@ -724,13 +739,11 @@
               </h4>
               <p class="text-xs text-slate-400">Stadium Junction, Puthiyara Road, Kozhikode, Kerala 673004</p>
             </div>
-            <!-- Universal Google Maps Link -->
             <a href="https://www.google.com/maps/search/?api=1&query=Malabar+LED+House+Stadium+Junction+Puthiyara+Road+Kozhikode" target="_blank" class="text-xs text-blue-400 hover:underline font-semibold flex items-center gap-1.5">
               Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
           
-          <!-- Exact Google Maps Embed Iframe -->
           <div class="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-800 bg-slate-950">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.0806798095305!2d75.78476927589472!3d11.255475250173165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba651c11a0f5895%3A0x19b06d95df80dc84!2sMalabar%20LED%20House.%20LED%20Display%20%26%20LED%20Sign!5e0!3m2!1sen!2sin!4v1790942007174!5m2!1sen!2sin" 
@@ -746,7 +759,7 @@
     </div>
   </section>
 
-  <!-- ================= FOOTER WITH NEW LOGO ================= -->
+  <!-- ================= FOOTER ================= -->
   <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
       
@@ -790,8 +803,18 @@
     </div>
   </div>
 
+  <!-- ================= INSTAGRAM EMBED LOADER SCRIPT ================= -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+
   <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
+    // --- Instagram Embed Loader Force Script ---
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.instgrm && window.instgrm.Embeds) {
+        window.instgrm.Embeds.process();
+      }
+    });
+
     // --- 7-Slide Responsive Carousel Engine ---
     let currentSlide = 0;
     const slides = document.querySelectorAll('.hero-slide');
